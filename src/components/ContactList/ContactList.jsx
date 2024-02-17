@@ -1,17 +1,12 @@
-import styles from './ContactList.module.css';
-const ContactList = ({ filterContacts, onDelete }) => {
+import css from './ContactList.module.css';
+
+export const ContactList = props => {
   return (
-    <ul className={styles.containerList}>
-      {filterContacts.map(({ id, name, number }) => (
-        <li className={styles.item} key={id}>
-          <p>
-            {name}: {number}
-          </p>
-          <button
-            className={styles.button}
-            type="button"
-            onClick={() => onDelete(id)}
-          >
+    <ul className={css.contactList}>
+      {props.contacts.map(contact => (
+        <li key={contact.id}>
+          {contact.name}: {contact.number}  
+          <button className={css.itemButton} type="button" onClick={() => props.handleDelete(contact.id)}>
             Delete
           </button>
         </li>
@@ -19,5 +14,3 @@ const ContactList = ({ filterContacts, onDelete }) => {
     </ul>
   );
 };
-
-export default ContactList;
