@@ -1,0 +1,30 @@
+.containerFilter {
+  margin: 0 auto;
+  max-width: 400px;
+  padding: 0 20px;
+  margin-bottom: 50px;
+}
+
+.titleFilter {
+  margin: 0;
+  margin-bottom: 20px;
+  text-align: center;
+  color: rgb(47, 47, 177);
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.input {
+  width: 100%;
+  border-radius: 6px;
+  padding: 5px;
+
+  outline: none;
+  border: 3px solid black;
+}
+
+.input:focus,
+.input:hover,
+.input:not(:placeholder-shown) {
+  border: 3px solid rgb(47, 47, 177);
+}

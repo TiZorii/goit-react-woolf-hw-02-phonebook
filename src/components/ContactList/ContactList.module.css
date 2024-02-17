@@ -1,0 +1,36 @@
+p {
+  margin: 0;
+}
+
+.containerList {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 0 20px;
+  list-style-type: none;
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  font-size: 20px;
+}
+
+.item:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.button {
+  font-size: 14px;
+  padding: 6px 12px;
+  border-radius: 15px;
+  background-color: black;
+  color: white;
+  outline: none;
+  border: 2px solid rgb(47, 47, 177);
+}
+
+.button:hover,
+.button:focus {
+  background-color: rgb(47, 47, 177);
+  border: 2px solid rgb(255, 255, 255);
+}

@@ -1,0 +1,46 @@
+.form {
+  max-width: 400px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  padding: 0 20px;
+}
+
+.label {
+  margin: 0;
+  margin-bottom: 5px;
+  font-weight: 700;
+}
+
+.input {
+  width: 100%;
+  border-radius: 6px;
+  padding: 5px;
+  margin-bottom: 10px;
+  outline: none;
+  border: 3px solid rgb(0, 0, 0);
+}
+
+.input:focus,
+.input:hover,
+.input:not(:placeholder-shown) {
+  border: 3px solid rgb(47, 47, 177);
+}
+
+/* .input:focus,
+.input:hover,
+.input:not(:placeholder-shown) {
+  border: 3px solid rgb(47, 47, 177);
+} */
+
+.button {
+  padding: 8px 15px;
+  border-radius: 8px;
+  background-color: rgb(47, 47, 177);;
+  color: azure;
+}
+
+.button:hover,
+.button:focus {
+  background-color: azure;
+  color: rgb(47, 47, 177);;
+}
