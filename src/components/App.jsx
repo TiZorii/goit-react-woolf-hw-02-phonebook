@@ -25,9 +25,9 @@ export class App extends Component {
       alert('exist');
       return;
     }
-    const id = nanoid();
+    
     this.setState(prev => ({
-      contacts: [...prev.contacts, { name, number, id }],
+      contacts: [...prev.contacts, { name, number, id: nanoid() }],
     }));
   };
 
@@ -36,15 +36,7 @@ export class App extends Component {
     return contacts.filter(contact =>
       contact.name.toLowerCase().includes(filter.toLowerCase())
     );
-  };
-
-  handleFilter = evt => {
-    this.setState({ [evt.target.name]: evt.target.value });
-    return this.state.contacts.filter(contact => {
-      let compare = contact.name;
-      return compare.includes(evt.target.value);
-    });
-  };
+  }
 
   handleDelete = id => {
     this.setState(prev => ({
